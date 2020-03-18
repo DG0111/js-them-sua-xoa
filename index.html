@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    .modalSua {
+        display: none;
+    }
+</style>
+<body class="container">
+<div class="form-group border p-2 modalSua">
+    <h2>Sửa lè</h2>
+    <div class="form-group">
+        <label for="">Tên của bạn</label>
+        <input id="editId" type="text" class="form-control" hidden placeholder="Nhập tên của bạn">
+        <input id="editName" type="text" class="form-control" placeholder="Nhập tên của bạn">
+    </div>
+    <div class="form-group">
+        <label for="">Tuổi của bạn</label>
+        <input id="editAge" type="text" class="form-control" placeholder="Nhập Tuổi của bạn">
+    </div>
+    <div class="form-group">
+        <label for="">Giới tính</label>
+        <select id="editGender" class="form-control form-control-sm">
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="">Lớp của bạn</label>
+        <input id="editClass" type="text" class="form-control" placeholder="Nhập lớp của bạn">
+    </div>
+    <div class="form-group">
+        <label for="">Trường của bạn</label>
+        <input id="editSchool" type="text" class="form-control" placeholder="Nhập trường của bạn">
+    </div>
+    <dic>
+        <button id="buttonSua" class="btn btn-success">Cập Nhật</button>
+        <button id="buttonCloseEdit" class="btn btn-primary">Đóng</button>
+    </dic>
+</div>
+<div>
+
+</div>
+
+<h2 class="title">Danh sách users</h2>
+<table class="table">
+    <caption>List of users</caption>
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Class</th>
+        <th scope="col">school</th>
+        <th scope="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add
+            </button>
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="showData">
+    </tbody>
+</table>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="">Tên của bạn</label>
+                        <input name="name" id="name" type="text" class="form-control" placeholder="Nhập tên của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tuổi của bạn</label>
+                        <input name="age" id="age" type="text" class="form-control" placeholder="Nhập Tuổi của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Giới tính</label>
+                        <select id="gender" name="gender" class="form-control form-control-sm">
+                            <option value="1">Nam</option>
+                            <option value="2">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Lớp của bạn</label>
+                        <input id="classs" name="classs" type="text" class="form-control"
+                               placeholder="Nhập lớp của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Trường của bạn</label>
+                        <input id="school" name="school" type="text" class="form-control"
+                               placeholder="Nhập trường của bạn">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ĐÓNG</button>
+                <button id="addStudent" type="button" data-dismiss="modal" class="btn btn-primary">Lưu sinh viên
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="public/js/student.js"></script>
+<script src="node_modules/lodash/lodash.js"></script>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</html>
